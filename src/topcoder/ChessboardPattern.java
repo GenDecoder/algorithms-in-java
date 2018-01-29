@@ -8,7 +8,7 @@ public class ChessboardPattern {
     /**
      * TopCoder problem # 1
      * */
-    public static String[] makeChessboard (int rows, int columns) {
+    private static String[] makeChessboard (int rows, int columns) {
         String[] result = new String[rows];
         boolean isOddRow = rows%2 > 0;
         boolean isOddColumn = columns%2 > 0;
@@ -26,7 +26,7 @@ public class ChessboardPattern {
     /**
      * Own algorithm. Source: https://en.wikipedia.org/wiki/Forsyth%E2%80%93Edwards_Notation
      * */
-    public static void convertFEN (String FEN) {
+    private static void convertFEN (String FEN) {
         String[] info = FEN.split(" ");
         String position = info[0];
         boolean whiteToPlay = info[1].equals("w");
