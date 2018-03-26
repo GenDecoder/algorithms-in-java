@@ -10,7 +10,7 @@ public class TimeConversion {
         int hours = Integer.valueOf(time.substring(0,2));
         int minutes = Integer.valueOf(time.substring(3, 5));
         int seconds = Integer.valueOf(time.substring(6,8));
-        boolean isPM = time.indexOf("PM") != -1;
+        boolean isPM = time.contains("PM");
         if (isPM && hours != 12)
             hours += 12;
         if (!isPM && hours == 12)
